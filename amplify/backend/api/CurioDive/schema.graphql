@@ -1,0 +1,38 @@
+enum FriendshipState {
+  ACCEPTED
+  WAITING
+}
+
+type Friendship @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  request: String
+  state: FriendshipState
+  from: User @hasOne
+  to: User @hasOne
+}
+
+type Topic @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  prompt: String!
+  description: String!
+  users: [User] @manyToMany(relationName: "UserTopic")
+}
+
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  username: String
+  follow: [Topic] @manyToMany(relationName: "UserTopic")
+  cronology: [Notification] @hasMany(indexName: "byUser", fields: ["id"])
+  favorites: [Notification] @hasMany(indexName: "byUser", fields: ["id"])
+  friendshipID: ID! @index(name: "byFriendship")
+  Friendship: Friendship @belongsTo(fields: ["friendshipID"])
+}
+
+type Notification @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  text: String!
+  image: AWSURL
+  userID: ID! @index(name: "byUser")
+}
+ 

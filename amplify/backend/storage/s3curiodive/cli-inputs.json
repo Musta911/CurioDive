@@ -1,0 +1,12 @@
+{
+  "resourceName": "s3curiodive",
+  "bucketName": "curiodive",
+  "policyUUID": "870b2d1a",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "READ",
+    "CREATE_AND_UPDATE",
+    "DELETE"
+  ]
+}

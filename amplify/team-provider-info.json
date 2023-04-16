@@ -1,0 +1,26 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-curiodive-staging-134920-authRole",
+      "UnauthRoleArn": "arn:aws:iam::969784093355:role/amplify-curiodive-staging-134920-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::969784093355:role/amplify-curiodive-staging-134920-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-curiodive-staging-134920-deployment",
+      "UnauthRoleName": "amplify-curiodive-staging-134920-unauthRole",
+      "StackName": "amplify-curiodive-staging-134920",
+      "StackId": "arn:aws:cloudformation:eu-central-1:969784093355:stack/amplify-curiodive-staging-134920/aa6e1e20-d3b8-11ed-90f8-0a39fc224e28",
+      "AmplifyAppId": "d3gvszrm0hcegz"
+    },
+    "categories": {
+      "auth": {
+        "CurioDive": {}
+      },
+      "storage": {
+        "s3curiodive": {}
+      },
+      "function": {
+        "testFunction": {}
+      }
+    }
+  }
+}

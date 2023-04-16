@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CurioDive</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="home">home</string>
+    <string name="profile">profile</string>
+    <string name="friends">friends</string>
+    <string name="topics">topics</string>
+    <string name="dives">dives</string>
+</resources>
